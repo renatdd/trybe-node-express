@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebChat</title>
+  <link rel="stylesheet" href="./chat.css">
+</head>
+<body>
+
+  <!-- Nickname START -->
+  <header class="container row full-width space-between">
+    <div id="userNickname" ></div>
+    <div>
+      <form id="nicknameForm" action="">
+        <input id="nicknameInput" data-testid="nickname-box" />
+        <button id="nicknameButton" data-testid="nickname-button">Set a new nickname</button>
+      </form>
+    </div>
+  </header>
+  <!-- Nickname END -->
+
+  <main>
+    
+    <!-- Messages START -->
+    <section class="messages">
+      <ul id="messages">
+      </ul>
+    </section>
+    <!-- Messages END -->
+
+    <!-- Online users START -->
+    <section class="online-users">
+      <ul id="onlineUsers"></ul>
+    </section>
+    <!-- Online users END -->
+    
+  </main>
+    <!-- Message form START -->
+    <section class="messageForm">
+      <form id="messageForm" action="">
+        <input id="messageInput" data-testid="message-box" autocomplete="off" />
+        <button id="sendButton" data-testid="send-button">Send</button>
+      </form>
+    </section>
+    <!-- Message form END -->
+
+  <!-- Scripts START -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='./js/chat.js'></script>
+  <!-- Scripts END -->
+</body>
+</html>
